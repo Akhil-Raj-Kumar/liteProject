@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/products.css">
+</head>
+<body>
+<h1 align="center">Add a Product</h1>
+<br><br>
+
+<form action="add_product" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<!--    <div class="container text-center" align="center">-->
+<!--         <div class="row justify-content-center">-->
+            <div class="color input-group input-group-sm mb-3">
+                <span class="input-group-text" id="pName">Product name</span>
+                <input type="text" id="product_name" name="pName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required><br><br>
+            </div>
+            <div class="color input-group input-group-sm mb-3">
+                <span class="input-group-text" id="pid">Product id</span>
+                <input type="number" id="product_id" name="pID" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required><br><br>
+            </div>
+            <div class="color input-group input-group-sm mb-3">
+                <span class="input-group-text" id="p_img">Product Image</span>
+                <input type="file" id="product_img" name="pImage" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required><br><br>
+            </div>
+             <div class="color input-group input-group-sm mb-3">
+                <span class="input-group-text" id="p_price">Product Price</span>
+                <input type="number" id="product_price" name="price" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required><br><br>
+            </div>
+                <input type="submit" value="Add product" class="btn btn-light">
+            </div>
+<!--    </div>-->
+
+</form>
+
+</body>
+</html>

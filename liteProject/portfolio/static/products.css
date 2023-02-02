@@ -1,0 +1,22 @@
+div .color{
+    background-color: #fff;
+
+}
+form{
+    padding: 0% 30%;
+}
+
+
+body {
+    background-color: #86B5FF;
+}
+
+h1{
+    padding: 20px;
+    color: #fff;
+}
+
+.btn{
+    position: relative;
+    margin: 0 40%;
+}
